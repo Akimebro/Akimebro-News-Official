@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>𝑺𝒀𝑪 (Small YouTuber Central)</h1>
+        <nav>
+            <div class="hamburger">☰</div> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+</header>
+
+
+<title>Gallery Navigation</title>
+<style>
+    #gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        margin: 20px;
+        border: 3px solid#000000;
+        padding: 20px;
+        background-color: #a600ff;
+    }
+    img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+</style>
+</head>
+<body>
+<div id="gallery">
+    <button id="prevBtn">Previous</button>
+    <img id="galleryImg" src="image1.jpg" alt="Gallery Image">
+    <button id="nextBtn">Next</button>
+</div>
+
+<script>
+    // Image URLs in the gallery
+    const images = ['images/Flowerboi.png', 'images/J4mour.png', 'images/MaynardKrakue.webp'];
+    
+    // Get references to HTML elements
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const galleryImg = document.getElementById('galleryImg');
+    
+    let currentIndex = 0;
+    
+    // Function to display the current image
+    function displayImage(index) {
+        galleryImg.src = images[index];
+    }
+    
+    // Event listener for previous button
+    prevBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        displayImage(currentIndex);
+    });
+    
+    // Event listener for next button
+    nextBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        displayImage(currentIndex);
+    });
+    
+    // Display the initial image
+    displayImage(currentIndex);
+</script>
+</body>
+</html>

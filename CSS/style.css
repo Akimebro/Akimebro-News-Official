@@ -1,0 +1,158 @@
+/* Main Page */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+ /*ALL PAGE EDITS*/
+body {
+    background-color: #fc9105;
+}
+
+footer {
+    background-color:#68410d
+}
+
+h1, h2 {
+    margin: 20px;
+    border: 3px solid#000000;
+    padding: 20px;
+    background-color: #7f4c16;
+    
+}
+
+h3 {
+    margin: 20px;
+    border: 3px solid#000000;
+    padding: 20px;
+    background-color: #f80000;
+    text-shadow: #000;
+}
+
+li{
+    margin: 20px;
+    border: 3px solid#000000;
+    padding: 20px;
+    background-color: #d2b48c;
+    
+}
+
+/* ARTICLE PAGE */
+main{
+    display:grid;
+    grid-template-columns: 3fr 1fr; /* 3:1 ratio between content and... */
+    gap: 20px;
+    padding: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.article-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.article-content{
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.advertisement {
+padding: 10px;
+border: 1px solid #000000;
+text-align: center;
+}
+
+/* GALLERY PAGE */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Spaces between photos */
+    padding: 20px;
+}
+
+.photo img {
+    width: 100%; /* Ensure images are fully responsive within their containers */
+    height: auto; /* Main aspect ratio */
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+nav {
+     display:flex;
+     justify-content: center; /* Center navigation items*/
+     padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Adjust gap between navigation items */
+}
+
+/* Hamburger Menu Style */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Hide regular navigation items on smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
+    /* When clicking the hamburger menu, use JavaScript to toggle this class to diaply the itms */
+    nav ul.active {
+        display: flex; /* Display navigation items in a column */
+    }
+}
+
+/*CHAT GPT CODE TO HELP WITH GALLERY*/
+#gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+img {
+    max-width: 50%;
+    max-height: 50%;
+}
